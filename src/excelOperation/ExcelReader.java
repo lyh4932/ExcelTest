@@ -45,7 +45,7 @@ public class ExcelReader {
     private CustomTypeReader mCustomTypeReader = new CustomTypeReader() {
         @Override
         public CaseBean readCustomObj(String type, String val) {
-            if(val == null){return null;}
+            if(val == null){ return null; }
             int index = (int) Double.parseDouble(val);
             return findSheetByName(type).readCase(index, mCustomTypeReader);
         }
